@@ -45,12 +45,20 @@ $(document).ready(function() {
                 table.append(tr);
                 
                 if($("#details").is(":checked") == true){
+                    var sunrise=data.sys.sunrise;
+                    var sunriseTime=new Date(1000*sunrise);
+                    hR = sunriseTime.getHours(), // 0-24 format
+                    mR = sunriseTime.getMinutes();
                     
+                    var sunset=data.sys.sunset;
+                    var sunsetTime=new Date(1000*sunset);
+                    hS = sunsetTime.getHours(), // 0-24 format
+                    mS = sunsetTime.getMinutes();
                     
-                    var tr=getLine('Sunrise:', data.sys.sunrise);
+                    var tr=getLine('Sunrise:', hR+":"+mR);
                     table.append(tr);
                     
-                    var tr=getLine('Sunset:', data.sys.sunset);
+                    var tr=getLine('Sunset:', hS+":"+mS);
                     table.append(tr);
                     
                     var tr=getLine('Wind:', data.wind.speed+' m/s');
@@ -62,7 +70,7 @@ $(document).ready(function() {
                     var tr=getLine('Max temperature:', parseFloat(data.main.temp_max-273.15).toFixed(1)+" ℃");
                     table.append(tr);
                     
-                    var tr=getLine('Min temperature:', data.visibility);
+                    var tr=getLine('Visibility:', parseFloat(data.visibility/1000).toFixed(2)+" km");
                     table.append(tr);
                 };
                 
