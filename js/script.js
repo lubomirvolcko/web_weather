@@ -22,9 +22,10 @@ $(document).ready(function() {
                 console.log("temp: "+data.main.temp);
                 console.log("desc: "+data.weather[0].description);
                 
+               
                 //dynamic table
                 $('#mainTable').empty();
-                var table=$('<table/>');
+                var table=$('<table id="info" class="table table-striped"/>');
                 var tr=getLine('City:', city);
                 table.append(tr);
                 $('#mainTable').append(table);
@@ -83,10 +84,10 @@ $(document).ready(function() {
    }); // CLICK
     
     function getLine(data1,data2){
-        var tr=$('<tr/>');
-        var td1=$('<td/>');
+        var tr=$('<tr id="tr"/>');
+        var td1=$('<td id="td1"/>');
         $(td1).append(data1);
-        var td2=$('<td/>');
+        var td2=$('<td id="td2"/>');
         $(td2).append(data2);
         tr.append(td1);
         tr.append(td2); 

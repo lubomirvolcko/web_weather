@@ -12,8 +12,8 @@ table {
 }
 
 #form {
-    border: 2px solid #CCCC66;
-    background-color: rgba(150,250,150,0.7);
+    
+    background-color: rgba(51, 153, 255,0.6);
 }
 
 th {
@@ -25,11 +25,46 @@ body {
     font-family: cursive;
 }
 
-h1 {
+#h1 {
     font-family: cursive;
-    color: darkcyan;
+    color: rgb(255,255,255);
+    font-size: 2vw;
+    font-weight: bold;
 }
 
 footer {
     padding-top: 20px;
+    width: 10vw;
+    margin: 0.2vh auto;
 }
+
+.footerText {
+    background-color: rgba(255,255,255,0.5);
+}
+
+#mainTable {
+    
+}
+
+#info{
+    
+    font-family: sans-serif;
+}
+
+#tr:nth-child(even) {
+    background: rgba(255,255,255,0.8);
+}
+
+#tr:nth-child(odd) {
+    background: rgba(51, 153, 255,0.6);
+}
+
+#td1 {
+    font-weight: bold;
+    text-align: left;
+}
+
+#td2 {
+    text-align: left;
+}
+
