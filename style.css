@@ -1,0 +1,35 @@
+div {
+    text-align: center;
+}
+
+tr {
+    text-align: center;
+    margin: 10px;
+}
+
+table {
+    margin: 10px auto;
+}
+
+#table {
+    border: 2px solid #CCCC66;
+    background-color: rgba(150,250,150,0.7);
+}
+
+th {
+    padding: 10px;
+}
+
+body {
+    background-image: url(img/bg.jpg);
+    font-family: cursive;
+}
+
+h1 {
+    font-family: cursive;
+    color: darkcyan;
+}
+
+footer {
+    padding-top: 20px;
+}
