@@ -15,7 +15,8 @@ $(document).ready(function() {
                 data : { format: 'json' },  
             error : function(){
              //vypis chyby ak zlyha komunikacia so serverom
-                
+                $('#perror').html("Error! Invalid request!"); 
+                $('#mainTable').empty();
            },
             dataType: 'json',
             success : function(data){
@@ -72,6 +73,9 @@ $(document).ready(function() {
                     table.append(tr);
                     
                     var tr=getLine('Visibility:', parseFloat(data.visibility/1000).toFixed(2)+" km");
+                    table.append(tr);
+                    
+                    var tr=getLine("Link on Google Maps: ","<A href=\"https://www.google.com/maps/search/?api=1&query="+data.coord.lat+","+data.coord.lon+"\" target=\"_blank\" style=\"color:yellow;\">"+city+"</A>");
                     table.append(tr);
                 };
                 

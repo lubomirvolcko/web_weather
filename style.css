@@ -68,3 +68,14 @@ footer {
     text-align: left;
 }
 
+a {
+    color: yellow;
+}
+
+#perror {
+    color: red;
+    font-size: 2vw;
+    font-weight: bold;
+    margin: 10px auto;
+}
+
